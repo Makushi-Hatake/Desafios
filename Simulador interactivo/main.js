@@ -3,6 +3,7 @@
 let total = 0;
 let precio = 0;
 let otroProducto = false;
+
 class producto{
     constructor (id, name, price){
         this.id = id;
@@ -11,44 +12,78 @@ class producto{
     }
 }
 const productos = [];
-productos.push(new producto (1,"Remera", 800));
-productos.push(new producto (2,"Pantalon", 1000));
-productos.push(new producto (3,"Gorra", 500));
+productos.push(new producto (1,"Remera", 800,));
+productos.push(new producto (2,"Pantalon", 1000,));
+productos.push(new producto (3,"Gorra", 500,));
 
-function agregarAlCarrito(){
+const carroDeCompras = [];
+class comprado {
+    constructor (id,cantidad,price){ 
+    this.id = id;
+    this.cantidad = cantidad;
+    this.price = price;
+     }
+}
+
+function comprando(){
     do {
         alert("Lista de precios: \nRemera $800 \nPantalon $1000 \nGorra $500");
-        let producto = parseInt(prompt("Ingresa el número del producto a comprar: \n1-Remera \n2-Pantalon \n3-Gorra","Ejemplo: 1 para elejir Remera")); //Pertime al usuario elejir el item mediante un número.
+        let producto = parseInt(prompt("Ingresa el número del producto a comprar: \n1-Remera \n2-Pantalon \n3-Gorra","Ejemplo: 1 para elejir Remera"));
         let cantidad = prompt("Que cantidad quieres comprar?", 0);
-       
+        
         switch (producto){
             case productos[0].id:
-                precio = 800;
-                subtotal = precio * cantidad;   //Realiza un producto entre el precio y la cantidad del item seleccionado.
-                alert("Agregaste "+ cantidad + " Remera/s de $800. Suman " + "$" + subtotal + " a tu compra."); //Informa el subtotal del item seleccionado.
+                item = productos[0].name;
+                precio = productos[0].price;
+                subtotal = precio * cantidad;
+                if (cantidad != 0){
+                    carroDeCompras.push(new comprado (item,cantidad,subtotal));
+                } 
+                alert("Agregaste "+ cantidad + " Remera/s de $800. Suman " + "$" + subtotal + " a tu compra.");
+                
                 break;
             case productos[1].id:
-                precio = 1000;
+                item = productos[1].name;
+                precio = productos[1].price;
                 subtotal = precio * cantidad;
+                if (cantidad != 0){
+                    carroDeCompras.push(new comprado (item,cantidad,subtotal));
+                } 
                 alert("Agregaste "+ cantidad + " Pantalon/es de $1000. Suman " + "$" + subtotal + " a tu compra.");
                 break;
             case productos[2].id:
-                precio = 500;
+                item = productos[2].name;
+                precio = productos[2].price;
                 subtotal = precio * cantidad;
+                if (cantidad != 0){
+                    carroDeCompras.push(new comprado (item,cantidad,subtotal));
+                } 
                 alert("Agregaste "+ cantidad + " Gorra/s de $500. Suman " + "$" + subtotal + " a tu compra.");      
                 break;
-            default:
-                alert("Alguno de los datos ingresados no son correctos");
-                precio = 0;
-                cantidad = 0;
         }
-        
         total = total + precio * cantidad;
         alert("LLevas un total de " + "$"+ total + " hasta el momento.");
         otroProducto = confirm ("Queres agregar otro producto?");
     } while (otroProducto);
     alert("El Total de tu compra es de " + "$"+total+".");
 }
-agregarAlCarrito();
+
+comprando();
+
+const facturaCompra = carroDeCompras.map((el) => {
+    return {
+        item : el.id,
+        cantidad : el.cantidad,
+        precio : el.price
+    }
+})
+console.log(facturaCompra);
+   
+
+
+
+
+
+
 
 
