@@ -4,6 +4,7 @@ let total = 0;
 let precio = 0;
 let otroProducto = false;
 
+//-----------Constructor de productos----------------//
 class producto{
     constructor (id, name, price){
         this.id = id;
@@ -16,6 +17,7 @@ productos.push(new producto (1,"Remera", 800,));
 productos.push(new producto (2,"Pantalon", 1000,));
 productos.push(new producto (3,"Gorra", 500,));
 
+//-------------Constructor del carrito------------//
 const carroDeCompras = [];
 class comprado {
     constructor (id,cantidad,price){ 
@@ -25,6 +27,7 @@ class comprado {
      }
 }
 
+//-------------------Funcion de Compra-------------------//
 function comprando(){
     do {
         alert("Lista de precios: \nRemera $800 \nPantalon $1000 \nGorra $500");
@@ -70,6 +73,7 @@ function comprando(){
 
 comprando();
 
+//-------------Factura de compra por consola-------------------//
 const facturaCompra = carroDeCompras.map((el) => {
     return {
         item : el.id,
