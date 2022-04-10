@@ -6,7 +6,7 @@ const productos =
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",
-        img: 'assets/img/dragonball.jpg',
+        img: './assets/img/dragonball.jpg',
         cantidad:1
     },
 
@@ -16,7 +16,7 @@ const productos =
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",
-        img: 'assets/img/demonslayer.jpg',
+        img: '/assets/img/demonslayer.jpg',
         cantidad:1
     },
 
@@ -26,7 +26,7 @@ const productos =
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",
-        img: 'assets/img/saitama.jpg',
+        img: '../assets/img/saitama.jpg',
         cantidad:1
     }
 ]
