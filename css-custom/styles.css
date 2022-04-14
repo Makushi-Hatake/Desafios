@@ -2,31 +2,29 @@
     margin: 0;
     padding: 0;
 }
-.card{
-    width: 18rem;
-}
+
 #contenedor-productos{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 #contenedor-carrito{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border: 5px solid black;
-    margin-top: 20px;   
+    border-radius: 15px;
+    margin-left: 40%;
     max-width: max-content;
+    margin-top: 2rem;
 }
-.productoEnCarrito {
-    border-left: 5px solid red;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-    margin: 5px 0;
-    padding: 5px 10px;
+
+.productoEnCarrito{
     display: flex;
-    justify-content: space-between;
+    border-bottom: 3px solid black;
+   
+
 }
-.productoEnCarrito p {
-    padding: 5px;
+.productoEnCarrito p{
+    padding: 0.5rem;
 }
