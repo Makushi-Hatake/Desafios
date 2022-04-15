@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +10,38 @@
     <script src="https://kit.fontawesome.com/eb6abe4dca.js" crossorigin="anonymous"></script>
     <title>Simulador Interactivo</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-              <span class="navbar-brand mb-0 h1">RemerAnime</span>
-              
+                <span class="navbar-brand mb-0 h1">RemerAnime</span>
             </div>
-          </nav>
+        </nav>
     </header>
-<!-- Seccion de Productos -->
-    <section id="contenedor-productos">
-        
-    </section>
-<!-- Seccion del Carrito -->
-    <section id="contenedor-carrito">
-        <div class="contenedor-titulo">
-            <h3>Tu Carrito</h3>
-        </div>
-    </section>
+    <!-- Seccion de Productos -->
+    <div class="contenedor container-fluid">
+            <section id="contenedor-productos">
+
+            </section>
+            <!-- Seccion del Carrito -->
+            <section class="contenedor-carrito">
+                <div id="carrito">
+                    <div class="carrito-header">
+                        <div>Item</div>
+                        <div>Precio</div>
+                        <div>Cantidad</div>
+                    </div>
+                    <div id="carrito-items">
+                    </div>
+                </div>
+        </section>
+    </div>
+    
     <script src="js-bt/bootstrap.min.js"></script>
     <script src="js/stock.js" type="module"></script>
     <script src="js/app.js" type="module"></script>
     <script src="js/carritoIndex.js" type="module"></script>
 </body>
+
 </html>

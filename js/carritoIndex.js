@@ -1,26 +1,41 @@
 import { productos } from "./stock.js";
 
-let carritoDeCompras = [];
 
-export const carritoIndex = (productoId) => {
+let carrito = [];
+const itemsEnCarrito = document.getElementById('carrito-items');
 
-    const contenedorCarrito = document.getElementById('contenedor-carrito');
-
-    const renderProductosCarrito = () => {
-        let producto = productos.find( producto => producto.id == productoId );
-        carritoDeCompras.push(producto);
-
-       producto.cantidad = 1;
-
-       let div = document.createElement('div');
-       div.classList.add('productoEnCarrito');
-       div.innerHTML = `<p>${producto.nombre}</p>
-                        <p>Precio: ${producto.precio}</p>
-                        <p id="cantidad${producto.id}">Cantidad: ${producto.cantidad}</p>
-       `;
-       contenedorCarrito.appendChild(div);
-
+export function agregarAlCarrito(id) {
+    if (carrito.some((item) => item.id === id)) {
+        alert("El producto ya esta en el carrito")
     }
-
-    renderProductosCarrito();
+    const item = productos.find((producto) => producto.id === id)
+        carrito.push(item);
+    
+    actualizarCarrito();
 }
+
+function actualizarCarrito() {
+    productosEnCarrito();
+}
+
+function productosEnCarrito(){
+    itemsEnCarrito.innerHTML = ""; 
+carrito.forEach((producto) => {
+    itemsEnCarrito.innerHTML += `
+ <div class="item-carrito">
+ <div class="item-info">
+     <img src="" alt="">
+     <h5>${producto.nombre}</h5>
+ </div>
+ <div class="precioUnitario">
+     <h5>$</h5>${producto.precio}
+ </div>
+ <div class="cantidades">
+     <div class="btn menos">-</div>
+     <div class="btn numero">${producto.cantidad}</div>
+     <div class="btn mas">+</div>
+ </div>
+</div>`;
+});
+}
+

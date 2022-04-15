@@ -1,12 +1,11 @@
-import { carritoIndex } from "./carritoIndex.js";
+import { agregarAlCarrito } from "./carritoIndex.js";
 import { productos } from "./stock.js";
 
 
-const mostrarProductos = (productos) =>{
+export const mostrarProductos = (productos) =>{
     const contenedorProductos = document.getElementById("contenedor-productos");
     productos.forEach(producto => {
         const div = document.createElement("div");
-        div.classList.add("card");
         div.innerHTML += `
         <div class="card" style="width: 18rem;">
         <img src=${producto.img} class="card-img-top" alt="imgproducto"></img>
@@ -22,7 +21,8 @@ const mostrarProductos = (productos) =>{
         contenedorProductos.appendChild(div);
         const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
-      carritoIndex(producto.id);
+      agregarAlCarrito(producto.id);
+
     })
     });
  

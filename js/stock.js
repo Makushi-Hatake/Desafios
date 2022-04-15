@@ -22,13 +22,33 @@ const productos =
 
     {
         id: 3,
-        nombre: "Remera One Punch Man",
+        nombre: "Remera Saitama",
+        desc: "Remera de algodon, imagen serigrafiada",
+        precio: 1500,
+        talle: "L",
+        img: 'assets/img/saitama.jpg',
+        cantidad:1
+    },
+
+    {
+        id: 4,
+        nombre: "Remera Saitama",
+        desc: "Remera de algodon, imagen serigrafiada",
+        precio: 1500,
+        talle: "L",
+        img: 'assets/img/saitama.jpg',
+        cantidad:1
+    },
+
+    {
+        id: 5,
+        nombre: "Remera Saitama",
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",
         img: 'assets/img/saitama.jpg',
         cantidad:1
     }
+    
 ]
-
 export {productos};
