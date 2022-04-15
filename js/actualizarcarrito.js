@@ -1,0 +1,2 @@
+import { productos } from "./stock";
+

@@ -7,7 +7,7 @@ export const mostrarProductos = (productos) =>{
     productos.forEach(producto => {
         const div = document.createElement("div");
         div.innerHTML += `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 15rem">
         <img src=${producto.img} class="card-img-top" alt="imgproducto"></img>
         <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>

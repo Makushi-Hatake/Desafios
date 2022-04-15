@@ -12,7 +12,7 @@ const productos =
 
     {
         id: 2,
-        nombre: "Remera Demon Slayer",
+        nombre: "Remera Tanjiro",
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",

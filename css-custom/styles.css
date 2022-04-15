@@ -2,19 +2,33 @@
     margin: 0;
     padding: 0;
 }
+/*----- CONTENEDOR GENERAL----- */
 .contenedor{
     margin: 0;
     margin-right: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+    height: 100vh;
 }
+
+/*----- CONTENDOR PRODUCTOS ----- */
 #contenedor-productos{
     display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(3, 3fr);
-}
-/* .contenedor-carrito{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 3fr);
+    min-width: 100vh;
+  }
+.card{
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 5px solid black;
     
-} */
+}
+/*----- CARRITO ----- */
 #carrito{
+    left: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -22,6 +36,8 @@
     border: 5px solid black;
     border-radius: 15px;
     margin-top: 2rem;
+    min-width: 30rem;
+    min-height: 75vh;
 }
 .carrito-header{
     display: flex;
@@ -30,7 +46,7 @@
     width: 100%;
     margin-top: 1rem;
 }
-
+/*----- PRODUCTOS EN CARRITO ----- */
 .productoEnCarrito{
     display: flex;
     
@@ -39,6 +55,7 @@
     padding: 0.5rem;
 }
 #carrito-items{
+    display: grid;
     min-height: 15rem;
     width: 100%;
 
@@ -54,11 +71,7 @@
 #carrito-items .precioUnitario{
     display: flex;
 }
-.card{
-    padding: 1rem;
-    border: 5px solid black;
-    max-height: max-content;
-}
+
 .numero:hover{
     cursor:context-menu;
     
