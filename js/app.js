@@ -1,7 +1,7 @@
 import { agregarAlCarrito } from "./carritoIndex.js";
 import { productos } from "./stock.js";
 
-
+// Funcion para mostrar el stock de productos mediante DOM
 export const mostrarProductos = (productos) =>{
     const contenedorProductos = document.getElementById("contenedor-productos");
     productos.forEach(producto => {

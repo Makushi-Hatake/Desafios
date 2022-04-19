@@ -1,9 +1,11 @@
 import { productos } from "./stock.js";
 
-
+// Array vacio para los productos
 let carrito = [];
+
 const itemsEnCarrito = document.getElementById('carrito-items');
 
+// Funcion para agregar productos al carrito
 export function agregarAlCarrito(id) {
     const item = productos.find((producto) => producto.id === id)
 
@@ -19,16 +21,18 @@ export function agregarAlCarrito(id) {
 
     actualizarCarrito();
 }
-
+// Condicional para llamar a los productos guardados en el localStorage
 if (localStorage.getItem('carritoLocal')) {
     carrito = JSON.parse(localStorage.getItem('carritoLocal'))
 }
 actualizarCarrito();
 
+// Funcion para actualizar el carrito con los productos seleccionados por el usuario
 function actualizarCarrito() {
     productosEnCarrito();
 }
 
+// Funcion para agregar los items mediante uso del DOM
 function productosEnCarrito() {
     itemsEnCarrito.innerHTML = "";
     carrito.forEach((producto) => {
