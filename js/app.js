@@ -22,7 +22,7 @@ export const mostrarProductos = (productos) =>{
         const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
       agregarAlCarrito(producto.id);
-
+      
     })
     });
  

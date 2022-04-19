@@ -5,23 +5,34 @@ let carrito = [];
 const itemsEnCarrito = document.getElementById('carrito-items');
 
 export function agregarAlCarrito(id) {
-    if (carrito.some((item) => item.id === id)) {
-        alert("El producto ya esta en el carrito")
-    }
     const item = productos.find((producto) => producto.id === id)
+
+    if (carrito.some((item) => item.id === id)) {
+        item.cantidad += 1;
+
+    } else {
         carrito.push(item);
-    
+        item.cantidad += 1;
+    }
+
+    localStorage.setItem('carritoLocal', JSON.stringify(carrito))
+
     actualizarCarrito();
 }
+
+if (localStorage.getItem('carritoLocal')) {
+    carrito = JSON.parse(localStorage.getItem('carritoLocal'))
+}
+actualizarCarrito();
 
 function actualizarCarrito() {
     productosEnCarrito();
 }
 
-function productosEnCarrito(){
-    itemsEnCarrito.innerHTML = ""; 
-carrito.forEach((producto) => {
-    itemsEnCarrito.innerHTML += `
+function productosEnCarrito() {
+    itemsEnCarrito.innerHTML = "";
+    carrito.forEach((producto) => {
+        itemsEnCarrito.innerHTML += `
  <div class="item-carrito">
  <div class="item-info">
      <img src="" alt="">
@@ -36,6 +47,8 @@ carrito.forEach((producto) => {
      <div class="btn mas">+</div>
  </div>
 </div>`;
-});
+    });
 }
+
+
 

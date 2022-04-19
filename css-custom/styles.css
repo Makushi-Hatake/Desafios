@@ -31,11 +31,10 @@
     left: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     border: 5px solid black;
     border-radius: 15px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     min-width: 30rem;
     min-height: 75vh;
 }
@@ -55,7 +54,8 @@
     padding: 0.5rem;
 }
 #carrito-items{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 15rem;
     width: 100%;
 
