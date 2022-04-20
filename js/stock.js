@@ -53,6 +53,17 @@ const productos =
         img: 'assets/img/saitama.jpg',
         cantidad:0,
         instock : 5
+    },
+
+    {
+        id: 6,
+        nombre: "Remera Saitama",
+        desc: "Remera de algodon, imagen serigrafiada",
+        precio: 1500,
+        talle: "L",
+        img: 'assets/img/saitama.jpg',
+        cantidad:0,
+        instock : 5
     }
     
 ]

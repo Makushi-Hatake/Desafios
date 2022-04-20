@@ -16,7 +16,7 @@ export const mostrarProductos = (productos) =>{
             <p class="card-text">Precio: $ ${producto.precio}</p>
             <a class="btn btn-primary" id=boton${producto.id}><i class="fas fa-cart-plus"></i></a>
         </div>
-      </div>
+        </div>
                          `
         contenedorProductos.appendChild(div);
         const boton = document.getElementById(`boton${producto.id}`);

@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
 }
+/* body{
+    background-color: black;
+    
+} */
+/*----- HEADER ----- */
+.contenedor-header{
+   background-color: black;
+}
+
 /*----- CONTENEDOR GENERAL----- */
 .contenedor{
     margin: 0;
@@ -10,7 +19,7 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(2, 2fr);
     justify-items: center;
-    height: 100vh;
+    background-color: black;
 }
 
 /*----- CONTENDOR PRODUCTOS ----- */
@@ -23,7 +32,8 @@
 .card{
     margin: 1rem;
     padding: 0.5rem;
-    border: 5px solid black;
+    border: 3px solid yellowgreen;
+    box-shadow: 0 0 15px yellowgreen;
     
 }
 /*----- CARRITO ----- */
@@ -32,11 +42,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid black;
+    border: 2px solid rgb(250, 2, 180);
     border-radius: 15px;
+    box-shadow: 0 0 15px rgb(250, 2, 180);
     margin-top: 1rem;
     min-width: 30rem;
-    min-height: 75vh;
+    min-height: 70vh;
 }
 .carrito-header{
     display: flex;
@@ -44,6 +55,7 @@
     justify-content: space-around;
     width: 100%;
     margin-top: 1rem;
+    color: white;
 }
 /*----- PRODUCTOS EN CARRITO ----- */
 .productoEnCarrito{
@@ -56,12 +68,14 @@
 #carrito-items{
     display: flex;
     flex-direction: column;
-    min-height: 15rem;
+    min-height: 8rem;
     width: 100%;
+    color: white;
 
 }
 #carrito-items .item-info {
     padding-bottom: 1rem;
+    
 }
 #carrito-items .item-carrito{
     display: flex;
@@ -71,8 +85,25 @@
 #carrito-items .precioUnitario{
     display: flex;
 }
-
+.cantidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cantidades div{
+    padding: 0.5rem;
+}
 .numero:hover{
     cursor:context-menu;
     
+}
+.btnMenos:hover{
+    background-color: yellow;
+    border-radius: 15px;
+    color: black;
+}
+.btnMas:hover{
+    background-color: yellow;
+    border-radius: 15px;
+    color: black;
 }

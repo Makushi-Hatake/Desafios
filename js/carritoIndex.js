@@ -42,9 +42,9 @@ function productosEnCarrito() {
      <h5>$</h5>${producto.precio}
  </div>
  <div class="cantidades">
-     <div class="btn menos">-</div>
-     <div class="btn numero">${producto.cantidad}</div>
-     <div class="btn mas">+</div>
+     <div class="btnMenos">-</div>
+     <div class="btnNumero">${producto.cantidad}</div>
+     <div class="btnMas">+</div>
  </div>
 </div>`;
     });
