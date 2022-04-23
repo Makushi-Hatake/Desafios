@@ -30,10 +30,8 @@ export const mostrarProductos = (productos) =>{
             style: {
                 background: "linear-gradient(to right, #AA076B, #61045F)",
             },
-
         }).showToast();
       agregarAlCarrito(producto.id);
-      
     })
     });
  

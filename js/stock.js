@@ -2,7 +2,7 @@ const productos =
 [
     {
         id: 1,
-        nombre: "Dragon Ball",
+        nombre: "Dragon Ball Z",
         desc: "Remera de algodon, imagen serigrafiada.",
         precio: 1500,
         talle: "L",
