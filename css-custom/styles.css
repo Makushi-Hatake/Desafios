@@ -2,15 +2,28 @@
     margin: 0;
     padding: 0;
 }
+/* body{
+    background-color: black;
+    
+} */
+/*----- HEADER ----- */
+.contenedor-header{
+   background-color: black;
+}
+
 /*----- CONTENEDOR GENERAL----- */
 .contenedor{
     margin: 0;
     margin-right: 0;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    height: 100vh;
+    background-image: url(/assets/img/bg/graffiti-4873.jpg);
+    /* background-image: url(/assets/img/bg/Fabric-1587.jpg); */
+    background-size: contain;
+    height: 1200px;
+    
 }
 
 /*----- CONTENDOR PRODUCTOS ----- */
@@ -23,20 +36,25 @@
 .card{
     margin: 1rem;
     padding: 0.5rem;
-    border: 5px solid black;
+    border: 3px solid yellowgreen;
+    box-shadow: 0 0 15px yellowgreen;
     
 }
 /*----- CARRITO ----- */
 #carrito{
+    position: fixed;
     left: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid black;
+    border: 2px solid rgb(250, 2, 180);
     border-radius: 15px;
+    box-shadow: 0 0 15px rgb(250, 2, 180);
     margin-top: 1rem;
     min-width: 30rem;
-    min-height: 75vh;
+    min-height: 70vh;
+    background-color: black;
+    opacity: 1;
 }
 .carrito-header{
     display: flex;
@@ -44,6 +62,7 @@
     justify-content: space-around;
     width: 100%;
     margin-top: 1rem;
+    color: white;
 }
 /*----- PRODUCTOS EN CARRITO ----- */
 .productoEnCarrito{
@@ -53,15 +72,24 @@
 .productoEnCarrito p{
     padding: 0.5rem;
 }
+.carrito-header{
+    word-spacing: 8rem;
+}
 #carrito-items{
     display: flex;
     flex-direction: column;
-    min-height: 15rem;
+    min-height: 8rem;
     width: 100%;
-
+    color: white;
+    margin: 1rem;
+}
+#carrito-items img{
+    position: relative;
+    height: 3rem;
+    width: 3rem;
 }
 #carrito-items .item-info {
-    padding-bottom: 1rem;
+    padding-bottom: 1rem;   
 }
 #carrito-items .item-carrito{
     display: flex;
@@ -71,8 +99,28 @@
 #carrito-items .precioUnitario{
     display: flex;
 }
+.cantidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cantidades div{
+    padding: 0.5rem;
+}
 
 .numero:hover{
     cursor:context-menu;
     
+}
+.btnMenos:hover{
+    background-color: yellow;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+}
+.btnMas:hover{
+    background-color: yellow;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
 }
