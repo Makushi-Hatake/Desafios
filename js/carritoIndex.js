@@ -4,6 +4,7 @@ import { productos } from "./stock.js";
 let carrito = [];
 const itemsEnCarrito = document.getElementById('carrito-items');
 
+
 export function agregarAlCarrito(id) {
     const item = productos.find((producto) => producto.id === id)
 
@@ -25,6 +26,7 @@ if (localStorage.getItem('carritoLocal')) {
 }
 actualizarCarrito();
 
+
 function actualizarCarrito() {
     productosEnCarrito();
 }
@@ -35,20 +37,24 @@ function productosEnCarrito() {
         itemsEnCarrito.innerHTML += `
  <div class="item-carrito">
  <div class="item-info">
-     <img src="" alt="">
-     <h5>${producto.nombre}</h5>
+     <img src="${producto.img}" alt="${producto.nombre}">
+     <h4>${producto.nombre}</h4>
  </div>
  <div class="precioUnitario">
      <h5>$</h5>${producto.precio}
  </div>
  <div class="cantidades">
-     <div class="btnMenos">-</div>
-     <div class="btnNumero">${producto.cantidad}</div>
-     <div class="btnMas">+</div>
+     <button id=btnMenos>-</button>
+     <div id= btnNumero>${producto.cantidad}</div>
+     <button id=btnMas>+</button>
  </div>
 </div>`;
     });
 }
+
+
+
+
 
 
 
