@@ -8,22 +8,15 @@ const itemsEnCarrito = document.getElementById('carrito-items');
 export function agregarAlCarrito(id) {
     const item = productos.find((producto) => producto.id === id)
 
-    if (carrito.some((item) => item.id === id)) {
-        item.cantidad += 1;
-
-    } else {
-        carrito.push(item);
-        item.cantidad += 1;
-    }
-
+    carrito.some((item) => item.id === id) ? item.cantidad++ : carrito.push(item);
+    
     localStorage.setItem('carritoLocal', JSON.stringify(carrito))
 
     actualizarCarrito();
 }
 // Condicional para llamar a los productos guardados en el localStorage
-if (localStorage.getItem('carritoLocal')) {
-    carrito = JSON.parse(localStorage.getItem('carritoLocal'))
-}
+localStorage.getItem('carritoLocal') && JSON.parse(localStorage.getItem('carritoLocal'))
+
 actualizarCarrito();
 
 function actualizarCarrito() {

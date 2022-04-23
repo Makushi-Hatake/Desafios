@@ -7,7 +7,7 @@ const productos =
         precio: 1500,
         talle: "L",
         img: 'assets/img/dragonball.jpg',
-        cantidad: 0,
+        cantidad: 1,
         instock : 5
     },
 
@@ -18,7 +18,7 @@ const productos =
         precio: 1500,
         talle: "L",
         img: 'assets/img/demonslayer.jpg',
-        cantidad: 0,
+        cantidad: 1,
         instock : 5
     },
 
@@ -29,7 +29,7 @@ const productos =
         precio: 1500,
         talle: "L",
         img: 'assets/img/saitama.jpg',
-        cantidad: 0,
+        cantidad: 1,
         instock : 5
     },
 
@@ -40,7 +40,7 @@ const productos =
         precio: 1500,
         talle: "L",
         img: 'assets/img/saitama.jpg',
-        cantidad:0,
+        cantidad: 1,
         instock : 5
     },
 
@@ -51,7 +51,7 @@ const productos =
         precio: 1500,
         talle: "L",
         img: 'assets/img/saitama.jpg',
-        cantidad:0,
+        cantidad: 1,
         instock : 5
     },
 
@@ -62,7 +62,7 @@ const productos =
         precio: 1500,
         talle: "L",
         img: 'assets/img/saitama.jpg',
-        cantidad:0,
+        cantidad: 1,
         instock : 5
     }
     
