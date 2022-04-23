@@ -2,7 +2,7 @@ const productos =
 [
     {
         id: 1,
-        nombre: "Remera Dragon Ball",
+        nombre: "Dragon Ball",
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",
@@ -13,7 +13,7 @@ const productos =
 
     {
         id: 2,
-        nombre: "Remera Tanjiro",
+        nombre: "Demon Slayer",
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",
@@ -24,7 +24,7 @@ const productos =
 
     {
         id: 3,
-        nombre: "Remera Saitama",
+        nombre: "One Punch Man",
         desc: "Remera de algodon, imagen serigrafiada",
         precio: 1500,
         talle: "L",

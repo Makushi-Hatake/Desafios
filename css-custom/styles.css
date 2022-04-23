@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
 }
-/* body{
+body{
     background-color: black;
+    font-family: 'Orbitron', sans-serif;
     
-} */
+}
 /*----- HEADER ----- */
 .contenedor-header{
    background-color: black;
@@ -32,6 +33,7 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(3, 3fr);
     min-width: 100vh;
+    margin-left: 3rem;
   }
 .card{
     margin: 1rem;
@@ -40,6 +42,15 @@
     box-shadow: 0 0 15px yellowgreen;
     
 }
+.card-body h5{
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+#item-desc{
+    font-size: 1rem;
+}
+
 /*----- CARRITO ----- */
 #carrito{
     position: fixed;
@@ -51,10 +62,11 @@
     border-radius: 15px;
     box-shadow: 0 0 15px rgb(250, 2, 180);
     margin-top: 1rem;
-    min-width: 30rem;
+    min-width: 38rem;
     min-height: 70vh;
     background-color: black;
     opacity: 1;
+    letter-spacing: 2px;
 }
 .carrito-header{
     display: flex;
@@ -64,7 +76,18 @@
     margin-top: 1rem;
     color: white;
 }
+.listaPrecio{
+    padding-left: 12rem;
+}
 /*----- PRODUCTOS EN CARRITO ----- */
+.item-info{
+    display: flex;
+    align-items: center;
+}
+.item-info h4{
+    font-size: 1rem;
+    padding-left: 1rem;
+}
 .productoEnCarrito{
     display: flex;
     
@@ -123,4 +146,8 @@
     border-radius: 15px;
     color: black;
     cursor: pointer;
+}
+.alert {
+    border: 2px solid rgb(2, 204, 250);
+    
 }

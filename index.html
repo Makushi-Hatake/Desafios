@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css-bt/bootstrap.min.css">
     <link rel="stylesheet" href="css-custom/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/eb6abe4dca.js" crossorigin="anonymous"></script>
     <title>Simulador Interactivo</title>
 </head>
@@ -16,31 +20,34 @@
     <header class="contenedor-header">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">RemerAnime</span>
+                <span class="navbar-brand mb-0 h1">SerigrafiAnime</span>
             </div>
         </nav>
     </header>
     <!-- Seccion de Productos -->
     <div class="contenedor container-fluid">
-            <section id="contenedor-productos">
+        <section id="contenedor-productos">
 
-            </section>
-            <!-- Seccion del Carrito -->
-            <section class="contenedor-carrito">
-                <div id="carrito">
-                    <div class="carrito-header">
-                        <div>Item Precio Cantidad</div>
-                    </div>
-                    <div id="carrito-items">
-                    </div>
+        </section>
+        <!-- Seccion del Carrito -->
+        <section class="contenedor-carrito">
+            <div id="carrito">
+                <div class="carrito-header">
+                    <div>Item</div>
+                    <div class="listaPrecio">Precio</div>
+                    <div>Cantidad</div>
                 </div>
+                <div id="carrito-items">
+                </div>
+            </div>
         </section>
     </div>
-    
+
     <script src="js-bt/bootstrap.min.js"></script>
     <script src="js/stock.js" type="module"></script>
     <script src="js/app.js" type="module"></script>
     <script src="js/carritoIndex.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
