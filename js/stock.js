@@ -35,33 +35,33 @@ const productos =
 
     {
         id: 4,
-        nombre: "Remera Saitama",
+        nombre: "Akatsuki Pain",
         desc: "Remera de algodon, imagen serigrafiada.",
-        precio: 1500,
+        precio: 3500,
         talle: "L",
-        img: 'assets/img/saitama.jpg',
+        img: 'assets/img/buzoNarutoPain.jpg',
         cantidad: 1,
         instock : 5
     },
 
     {
         id: 5,
-        nombre: "Remera Saitama",
+        nombre: "Attack on Titan",
         desc: "Remera de algodon, imagen serigrafiada.",
-        precio: 1500,
+        precio: 3500,
         talle: "L",
-        img: 'assets/img/saitama.jpg',
+        img: 'assets/img/shingeki.jpg',
         cantidad: 1,
         instock : 5
     },
 
     {
         id: 6,
-        nombre: "Remera Saitama",
+        nombre: "One Piece - Zoro",
         desc: "Remera de algodon, imagen serigrafiada.",
-        precio: 1500,
+        precio: 3500,
         talle: "L",
-        img: 'assets/img/saitama.jpg',
+        img: 'assets/img/buzoOnePiece.jpg',
         cantidad: 1,
         instock : 5
     }
