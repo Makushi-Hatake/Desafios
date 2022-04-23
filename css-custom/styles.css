@@ -29,8 +29,7 @@ body{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    background-image: url(/assets/img/bg/graffiti-4873.jpg);
-    /* background-image: url(/assets/img/bg/Fabric-1587.jpg); */
+    background-image: url(/assets/img/graffiti-4873.jpg);
     background-size: contain;
     height: 1200px;
     
