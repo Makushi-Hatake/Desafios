@@ -100,9 +100,13 @@ body{
     margin-top: 1rem;
     color: white;
 }
-.listaPrecio{
-    padding-left: 12rem;
+.listaItem{
+    margin-left: 8rem;
 }
+.listaPrecio{
+    padding-left: 6rem;
+}
+
 /*----- PRODUCTOS EN CARRITO ----- */
 .item-info{
     display: flex;
