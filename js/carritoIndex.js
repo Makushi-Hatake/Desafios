@@ -15,7 +15,10 @@ export function agregarAlCarrito(id) {
     actualizarCarrito();
 }
 // Condicional para llamar a los productos guardados en el localStorage
-localStorage.getItem('carritoLocal') && JSON.parse(localStorage.getItem('carritoLocal'))
+// localStorage.getItem('carritoLocal') && JSON.parse(localStorage.getItem('carritoLocal'))
+if (localStorage.getItem('carritoLocal')) {
+    carrito = JSON.parse(localStorage.getItem('carritoLocal'))
+}
 
 actualizarCarrito();
 
@@ -28,20 +31,20 @@ function productosEnCarrito() {
     itemsEnCarrito.innerHTML = "";
     carrito.forEach((producto) => {
         itemsEnCarrito.innerHTML += `
- <div class="item-carrito">
- <div class="item-info">
+ <ul class="item-carrito">
+ <li class="item-info">
      <img src="${producto.img}" alt="${producto.nombre}">
      <h4>${producto.nombre}</h4>
- </div>
- <div class="precioUnitario">
+ </li>
+ <li class="precioUnitario">
      <h5>$</h5>${producto.precio}
- </div>
- <div class="cantidades">
-     <button id=btnMenos>-</button>
+ </li>
+ <li class="cantidades">
+     <a id=btnMas>+</a>
      <div id= btnNumero>${producto.cantidad}</div>
-     <button id=btnMas>+</button>
- </div>
-</div>`;
+     <a id=btnMenos>-</a>
+ </li>
+</ul>`;
     });
 }
 

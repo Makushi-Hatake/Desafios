@@ -10,8 +10,17 @@ body{
 /*----- HEADER ----- */
 .contenedor-header{
    background-color: black;
-}
+   color: white;
+   border-bottom: 1px solid yellow;
 
+}
+.navbar{
+    justify-content: center;
+}
+.navbar-menu{
+    display: flex;
+    justify-content: center;
+}
 /*----- CONTENEDOR GENERAL----- */
 .contenedor{
     margin: 0;
@@ -40,17 +49,32 @@ body{
     padding: 0.5rem;
     border: 3px solid yellowgreen;
     box-shadow: 0 0 15px yellowgreen;
+    background-color: black;
+    color: white;
     
 }
 .card-body h5{
     text-transform: uppercase;
     font-weight: 600;
+    background-color: greenyellow;
+    color: black;
+    text-align: center;
 
 }
 #item-desc{
     font-size: 1rem;
+    color: white;
 }
-
+.btn{
+    background-color: yellow;
+    color: black;
+    border:  1px solid yellow;
+}
+.btn:hover{
+    background-color:  rgb(250, 2, 180);
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
 /*----- CARRITO ----- */
 #carrito{
     position: fixed;
@@ -87,6 +111,11 @@ body{
 .item-info h4{
     font-size: 1rem;
     padding-left: 1rem;
+    margin: 0;
+}
+.item-info img{
+    border: 1px solid white;
+    border-radius: 5px;
 }
 .productoEnCarrito{
     display: flex;
@@ -126,28 +155,41 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 .cantidades div{
     padding: 0.5rem;
 }
-
+#btnMenos {
+    background-color: white;
+    height: 1.5rem;
+    width: 0.5rem;
+    border-radius: 15px;
+    color: black;
+}
+#btnMas{
+    background-color: white;
+    height: 1.5rem;
+    width: 0.5rem;
+    border-radius: 15px;
+    color: black;
+}
 .numero:hover{
     cursor:context-menu;
     
 }
-.btnMenos:hover{
+#btnMenos:hover{
     background-color: yellow;
     border-radius: 15px;
     color: black;
     cursor: pointer;
 }
-.btnMas:hover{
+#btnMas:hover{
     background-color: yellow;
     border-radius: 15px;
     color: black;
     cursor: pointer;
 }
 .alert {
-    border: 2px solid rgb(2, 204, 250);
-    
+    border: 2px solid rgb(2, 204, 250);   
 }
