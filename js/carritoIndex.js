@@ -24,7 +24,11 @@ export function agregarAlCarrito(id) {
 if (localStorage.getItem('carritoLocal')) {
     carrito = JSON.parse(localStorage.getItem('carritoLocal'))
 }
-// actualizarCarrito();
+actualizarCarrito();
+
+function actualizarCarrito() {
+    productosEnCarrito();
+}
 
 // Funcion para agregar los items mediante uso del DOM
 function productosEnCarrito() {
