@@ -14,10 +14,8 @@ export function agregarAlCarrito(id) {
 
     actualizarCarrito();
 }
-// Condicional para llamar a los productos guardados en el localStorage
-if (localStorage.getItem('carritoLocal')) {
-    carrito = JSON.parse(localStorage.getItem('carritoLocal'))
-}
+// Condicional para recuperar los productos guardados en el localStorage al actuliazar la página
+ localStorage.getItem('carritoLocal') ? carrito = JSON.parse(localStorage.getItem('carritoLocal')) : []
 
 actualizarCarrito();
 
