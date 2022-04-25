@@ -6,6 +6,7 @@ export const mostrarProductos = (productos) =>{
     const contenedorProductos = document.getElementById("contenedor-productos");
     productos.forEach(producto => {
         const div = document.createElement("div");
+        div.classList.add('col');
         div.innerHTML += `
         <div class="card" style="width: 18rem">
         <img src=${producto.img} class="card-img-top" alt="imgproducto"></img>

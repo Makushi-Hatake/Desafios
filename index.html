@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://kit.fontawesome.com/eb6abe4dca.js" crossorigin="anonymous"></script>
+
     <title>Simulador Interactivo</title>
 </head>
 
@@ -26,26 +27,28 @@
     </header>
     <!-- Seccion de Productos -->
     <div class="contenedor container-fluid">
-        <section id="contenedor-productos">
+        <section class="row row-cols-2 align-items-start">
+            <div class="row row-cols-2" id="contenedor-productos">
 
+            </div>
+            <section class="contenedor-carrito col-6">
+                <div class="col" id="carrito">
+                    <div class="carrito-header">
+                        <div class="listaItem">Item</div>
+                        <div class="listaPrecio">Precio</div>
+                        <div>Cantidad</div>
+                    </div>
+                    <div id="carrito-items">
+                    </div>
+                </div>
+            </section>
         </section>
         <!-- Seccion del Carrito -->
-        <section class="contenedor-carrito">
-            <div id="carrito">
-                <div class="carrito-header">
-                    <div class="listaItem">Item</div>
-                    <div class="listaPrecio">Precio</div>
-                    <div>Cantidad</div>
-                </div>
-                <div id="carrito-items">
-                </div>
-            </div>
-        </section>
+        
     </div>
-
     <script src="js-bt/bootstrap.min.js"></script>
-    <script src="js/stock.js" type="module"></script>
     <script src="js/app.js" type="module"></script>
+    <script src="js/stock.js" type="module"></script>
     <script src="js/carritoIndex.js" type="module"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>

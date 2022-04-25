@@ -23,26 +23,11 @@ body{
 }
 /*----- CONTENEDOR GENERAL----- */
 .contenedor{
-    margin: 0;
-    margin-right: 0;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
     background-image: url(/assets/img/graffiti.jpg);
     background-size: contain;
-    height: 1200px;
-    
 }
 
 /*----- CONTENDOR PRODUCTOS ----- */
-#contenedor-productos{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(3, 3fr);
-    min-width: 100vh;
-    margin-left: 3rem;
-  }
 .card{
     margin: 1rem;
     padding: 0.5rem;
@@ -75,18 +60,20 @@ body{
     box-shadow: 0 0 10px red;
 }
 /*----- CARRITO ----- */
+.contenedor-carrito{
+    position: sticky;
+    top: 0%;
+    margin-left: 1rem;
+}
 #carrito{
-    position: fixed;
-    left: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 1rem;
     border: 2px solid rgb(250, 2, 180);
     border-radius: 15px;
     box-shadow: 0 0 15px rgb(250, 2, 180);
     margin-top: 1rem;
-    min-width: 38rem;
-    min-height: 70vh;
     background-color: black;
     opacity: 1;
     letter-spacing: 2px;
@@ -150,6 +137,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0;
 }
 #carrito-items .precioUnitario{
     display: flex;
@@ -195,4 +183,64 @@ body{
 }
 .alert {
     border: 2px solid rgb(2, 204, 250);   
+}
+
+
+/*----- MEDIA QUERIES ----- */
+
+/* TABLETS */
+
+@media only screen and (max-width: 992px){
+
+#contenedor-productos{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-carrito{
+    margin: 0;
+    padding: 0;
+}
+#carrito{
+    left: 40%;
+    min-width: 15px;
+}
+.listaItem{
+    margin: 0;
+}
+.listaPrecio{
+    padding-left: 11rem;
+}
+}
+
+/* CELULARES MEDIUM*/
+
+@media only screen and (max-width: 768px){
+
+#contenedor-productos{
+    width: 40%;
+}
+.contenedor-carrito{
+    margin-left: 3rem;
+}
+.listaItem{
+    padding-left: 2rem;
+}
+.listaPrecio{
+    padding-left: 3rem;
+}
+.item-info h4{
+    display: none;
+}
+}
+/* CELULAR SMALL*/
+@media only screen and (max-width: 576px){
+
+.listaItem{
+    padding-left: 3rem;
+
+}
+.listaPrecio{
+    padding-right: 2rem;
+    }
+
 }
