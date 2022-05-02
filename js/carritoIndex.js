@@ -4,6 +4,7 @@ import { productos } from "./stock.js";
 let carrito = [];
 
 const itemsEnCarrito = document.getElementById('carrito-items');
+const subTotalCarrito = document.getElementById('subTotal');
 
 export function agregarAlCarrito(id) {
     const item = productos.find((producto) => producto.id === id)
@@ -14,13 +15,15 @@ export function agregarAlCarrito(id) {
 
     actualizarCarrito();
 }
-// Condicional para recuperar los productos guardados en el localStorage al actuliazar la página
- localStorage.getItem('carritoLocal') ? carrito = JSON.parse(localStorage.getItem('carritoLocal')) : []
+// Condicional para recuperar los productos guardados en el localStorage al actualiazar la página
+localStorage.getItem('carritoLocal') ? carrito = JSON.parse(localStorage.getItem('carritoLocal')) : []
 
 actualizarCarrito();
 
+
 function actualizarCarrito() {
     productosEnCarrito();
+    mostrarTotal();
 }
 
 // Funcion para agregar los items mediante uso del DOM
@@ -37,12 +40,25 @@ function productosEnCarrito() {
      <h5>$</h5>${producto.precio}
  </li>
  <li class="cantidades">
-     <a id=btnMas>+</a>
-     <div id= btnNumero>${producto.cantidad}</div>
-     <a id=btnMenos>-</a>
+     <div id=numero>${producto.cantidad}</div>
+    <a><i id=btnMenos class="fas fa-minus-circle"></i></a>
  </li>
-</ul>`;
+</ul>
+`;
+
     });
+}
+
+// Funcion para mostrar el total items y valor de la compra
+
+function mostrarTotal(){
+    let subTotal = 0,
+        itemsTotal = 0;
+    carrito.forEach((producto) => {
+        subTotal += producto.precio * producto.cantidad;
+        itemsTotal += producto.cantidad;
+    });
+    subTotalCarrito.innerHTML = `Subtotal (${itemsTotal} items): $${subTotal}`;
 }
 
 

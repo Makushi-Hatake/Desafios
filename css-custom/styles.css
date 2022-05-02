@@ -32,15 +32,15 @@ body{
     margin: 1rem;
     padding: 0.5rem;
     border: 3px solid yellowgreen;
-    box-shadow: 0 0 15px yellowgreen;
-    background-color: black;
+    box-shadow: 0 0 15px #24FE41;
+    background-color: #0F2027;
     color: white;
     
 }
 .card-body h5{
     text-transform: uppercase;
     font-weight: 600;
-    background-color: greenyellow;
+    background: linear-gradient( 10deg, #FDFC47, #24FE41);
     color: black;
     text-align: center;
 
@@ -74,7 +74,7 @@ body{
     border-radius: 15px;
     box-shadow: 0 0 15px rgb(250, 2, 180);
     margin-top: 1rem;
-    background-color: black;
+    background-color: #0F2027;
     opacity: 1;
     letter-spacing: 2px;
 }
@@ -92,7 +92,21 @@ body{
 .listaPrecio{
     padding-left: 6rem;
 }
-
+#subTotal{
+    color: white;
+    text-align: center;
+    background: linear-gradient(to right, #AA076B, #61045F);
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+#finalizarCompra{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    background: linear-gradient(to right, #AA076B, #61045F);
+    border-radius: 15px;
+    margin-bottom: 0.25rem;
+}
 /*----- PRODUCTOS EN CARRITO ----- */
 .item-info{
     display: flex;
@@ -148,34 +162,13 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-.cantidades div{
+#numero{
     padding: 0.5rem;
 }
-#btnMenos {
-    background-color: white;
-    height: 1.5rem;
-    width: 0.5rem;
-    border-radius: 15px;
-    color: black;
-}
-#btnMas{
-    background-color: white;
-    height: 1.5rem;
-    width: 0.5rem;
-    border-radius: 15px;
-    color: black;
-}
-.numero:hover{
-    cursor:context-menu;
-    
+#numero:hover{
+    cursor:context-menu;   
 }
 #btnMenos:hover{
-    background-color: yellow;
-    border-radius: 15px;
-    color: black;
-    cursor: pointer;
-}
-#btnMas:hover{
     background-color: yellow;
     border-radius: 15px;
     color: black;
@@ -237,7 +230,6 @@ body{
 
 .listaItem{
     padding-left: 3rem;
-
 }
 .listaPrecio{
     padding-right: 2rem;

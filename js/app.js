@@ -1,9 +1,13 @@
 import { agregarAlCarrito } from "./carritoIndex.js";
-import { productos } from "./stock.js";
+import { getData } from "./getData.js";
+
 
 // Funcion para mostrar el stock de productos mediante DOM
-export const mostrarProductos = (productos) =>{
+export const mostrarProductos = async () => {
+
     const contenedorProductos = document.getElementById("contenedor-productos");
+    const productos = await getData();
+
     productos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add('col');
@@ -30,6 +34,7 @@ export const mostrarProductos = (productos) =>{
             position: "center",
             style: {
                 background: "linear-gradient(to right, #AA076B, #61045F)",
+                cursor: "default",
             },
         }).showToast();
       agregarAlCarrito(producto.id);
@@ -37,6 +42,6 @@ export const mostrarProductos = (productos) =>{
     });
  
 } 
-mostrarProductos(productos);
+mostrarProductos();
 
 
