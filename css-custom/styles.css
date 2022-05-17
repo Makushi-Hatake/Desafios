@@ -168,7 +168,7 @@ body{
 #numero:hover{
     cursor:context-menu;   
 }
-#btnMenos:hover{
+.btnMenos:hover{
     background-color: yellow;
     border-radius: 15px;
     color: black;

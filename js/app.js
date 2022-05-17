@@ -3,6 +3,7 @@ import { getData } from "./getData.js";
 
 
 // Funcion para mostrar el stock de productos mediante DOM
+
 export const mostrarProductos = async () => {
 
     const contenedorProductos = document.getElementById("contenedor-productos");
@@ -40,8 +41,6 @@ export const mostrarProductos = async () => {
       agregarAlCarrito(producto.id);
     })
     });
- 
 } 
 mostrarProductos();
-
 
