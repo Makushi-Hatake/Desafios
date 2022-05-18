@@ -33,26 +33,23 @@
             </div>
             <section class="contenedor-carrito col-6">
                 <div class="col" id="carrito">
-                    <div class="carrito-header">
-                        <div class="listaItem">Item</div>
-                        <div class="listaPrecio">Precio</div>
-                        <div>Cantidad</div>
-                    </div>
-                    <div id="carrito-items">
-                    </div>
-                    <div class="carrito-footer row row-cols-1"> 
-                        <div class="col" id="subTotal">
-                            Subtotal
-                        </div>
-                        <div class="col" id="finalizarCompra">
-                            Finalizar compra
-                        </div>
-                    </div>
+                    <table class="table table-borderless" id="carrito-items">
+                        <thead>
+                            <tr>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot id="subTotal"> </tfoot>
+                    </table>
                 </div>
             </section>
         </section>
         <!-- Seccion del Carrito -->
-        
+
     </div>
     <script src="js-bt/bootstrap.min.js"></script>
     <script src="js/app.js" type="module"></script>
