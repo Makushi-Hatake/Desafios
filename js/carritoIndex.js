@@ -12,6 +12,8 @@ const modalCheckout = document.querySelector('.modalCheckout');
 const selectorEnvio = document.getElementsByName('valor-envio');
 const envioTotal = document.getElementById('total-envio');
 const totalPagar = document.getElementById('total-modal');
+const itemsCompra = document.querySelector('#modal-items tbody');
+
 
 //Variables
 let subTotal = 0;
@@ -118,12 +120,12 @@ const restarCarrito = (id) => {
         const itemHtml = document.querySelector('#carrito-items tbody');
         itemHtml.removeChild(itemHtml.children[0]);
         actualizarCarrito();
+        sincronizarStorage();
+
     }
 }
 
 //Modal para finalizar la compra
-
-const itemsCompra = document.querySelector('#modal-items tbody');
 
 
 function mostrarEnModal() {
@@ -172,6 +174,7 @@ const totalModal = () => {
     sincronizarStorage();
 
 }
+
 
 
 
