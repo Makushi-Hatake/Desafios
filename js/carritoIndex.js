@@ -13,7 +13,7 @@ const selectorEnvio = document.getElementsByName('valor-envio');
 const envioTotal = document.getElementById('total-envio');
 const totalPagar = document.getElementById('total-modal');
 const itemsCompra = document.querySelector('#modal-items tbody');
-
+const comprar = document.getElementById('comprar');
 
 //Variables
 let subTotal = 0;
@@ -69,13 +69,6 @@ export function productosEnCarrito() {
     sincronizarStorage();
 }
 
-//Funcion para sincronizar el LocalStorage
-
-function sincronizarStorage() {
-
-    localStorage.setItem('carrito-local', JSON.stringify(carrito));
-}
-
 // Funcion para mostrar el total de items,valor de la compra y vaciar carrito.
 export function footerCarrito() {
     let subTotal = 0,
@@ -94,6 +87,9 @@ export function footerCarrito() {
     const vaciarCarrito = document.getElementById('vaciarCarrito');
     vaciarCarrito.addEventListener('click', () => {
         carrito = [];
+        location. reload();
+        actualizarCarrito();
+        localStorage.clear();
         footerCarrito();
         productosEnCarrito();
     });
@@ -120,9 +116,9 @@ const restarCarrito = (id) => {
         const itemHtml = document.querySelector('#carrito-items tbody');
         itemHtml.removeChild(itemHtml.children[0]);
         actualizarCarrito();
-        sincronizarStorage();
-
     }
+    sincronizarStorage();
+
 }
 
 //Modal para finalizar la compra
@@ -153,7 +149,6 @@ const totalModal = () => {
 
     subTotal = carrito.reduce((acc, producto) => acc + producto.cantidad * producto.precio, 0);
 
-
     selectorEnvio.forEach((radio) => {
         radio.addEventListener('change', () => {
             switch (radio.value) {
@@ -172,11 +167,31 @@ const totalModal = () => {
     });
 
     sincronizarStorage();
+}
+//Funcion para sincronizar el LocalStorage
 
+function sincronizarStorage() {
+
+    localStorage.setItem('carrito-local', JSON.stringify(carrito));
 }
 
+//Funcion boton comprar
 
+comprar.addEventListener('click', () => {
 
+    Toastify({
+        text: "Gracias por participar del simulador!",
+        className: "info",
+        duration: "-1",
+        position: "center",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          width: "800px",
+          height: "700px",
+          display: "flex",
+          alignItems: "center",
+          letterSpacing: "3px",
+        }
+      }).showToast();
 
-
-
+})

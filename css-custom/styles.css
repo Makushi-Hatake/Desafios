@@ -180,27 +180,35 @@ body{
 /*----- MODAL -----*/
 .modalCheckout{
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 25%;
-    width: 60%;
-    height: 80vh;
+    width: max-content;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all .5s;
-    opacity: 0;
     visibility: hidden;
     background-color: white;
+    border: solid 3px #AA076B;
+    border-radius: 15px;
 }
 .modal-show{
     opacity: 1;
     visibility: visible;
-    z-index: 5;
 }
-
-
-
+.modal-footer{
+    display: flex;
+    flex-direction: column;
+}
+#btnCerrar{
+    width: 100%;
+    border-color: white;
+    border-radius: 15px;
+}
+#btnCerrar:hover{
+    background-color: rgb(232, 41, 41);
+}
 /*----- MEDIA QUERIES ----- */
 
 /* TABLETS */

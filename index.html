@@ -48,48 +48,50 @@
             </section>
         </section>
         <!-- Seccion del Carrito -->
-        <div class="modalCheckout">
-            <button id="btnCerrar"><i class="fas fa-times-circle"></i></button>
-            <div>
-                <h3>Tu Carrito</h3>
-            </div>
-            <div id="contenedor-compra">
-                <table class="table table-borderless" id="modal-items">
-                    <thead>
-                        <tr>
-                            <th scope="col">Item</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-            <div id="tipo-envio" class="mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="valor-envio" id="flexRadioDefault1" value="0"
-                        checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Retiro en Local (Sin costo)
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="valor-envio" id="flexRadioDefault2" value="500">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Envio a domicilio ($500)
-                    </label>
-                </div>
-            </div>
-            <div>
+            <div class="modalCheckout">
+                <button id="btnCerrar"><i class="fas fa-times-circle"></i></button>
                 <div>
-                    <h4 id="total-envio">Costo de envio:</h4>
-                    <h3 id="total-modal">Total Compra</h3>
+                    <h3>Tu Carrito</h3>
                 </div>
-                <label for="exampleFormControlInput1" class="form-label">Ingresa tu Email para recibir el
-                    comprobante</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                <div><button type="button" class="btn btn-primary">COMPRAR</button></div>
+                <div id="contenedor-compra">
+                    <table class="table table-borderless" id="modal-items">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="tipo-envio" class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="valor-envio" id="flexRadioDefault1" value="0"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Retiro en Local (Sin costo)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="valor-envio" id="flexRadioDefault2"
+                            value="500">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Envio a domicilio ($500)
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                        <h4 id="total-envio">Costo de envio:</h4>
+                        <h3 id="total-modal">Total Compra</h3>
+                    </div>
+                    <label for="exampleFormControlInput1" class="form-label">Ingresa tu Email para recibir el
+                        comprobante</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                    <div><button type="button" class="btn btn-primary" id="comprar">COMPRAR</button></div>
+                </div>
             </div>
-        </div>
     </div>
     <script src="js-bt/bootstrap.min.js"></script>
     <script src="js/app.js" type="module"></script>
