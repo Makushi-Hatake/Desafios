@@ -5,10 +5,16 @@ import { actualizarCarrito } from "./actualizarCarrito.js";
 // Array vacio para los productos
 let carrito = [];
 
-// Variables 
+// Selectores 
 const itemsEnCarrito = document.querySelector('#carrito-items tbody');
 const subTotalCarrito = document.getElementById('carrito-footer');
 const modalCheckout = document.querySelector('.modalCheckout');
+const selectorEnvio = document.getElementsByName('valor-envio');
+const envioTotal = document.getElementById('total-envio');
+const totalPagar = document.getElementById('total-modal');
+
+//Variables
+let subTotal = 0;
 
 //Listeners
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarEnModal();
 });
 const btnCerrarModal = document.getElementById('btnCerrar');
-    btnCerrarModal.addEventListener('click', ()=>{
-        modalCheckout.classList.toggle('modal-show')
-    })
- 
+btnCerrarModal.addEventListener('click', () => {
+    modalCheckout.classList.toggle('modal-show')
+})
+
 
 // Funcion para agregar productos al carrito
 export function agregarAlCarrito(id) {
@@ -84,13 +90,13 @@ export function footerCarrito() {
     </tr>
     `;
     const vaciarCarrito = document.getElementById('vaciarCarrito');
-        vaciarCarrito.addEventListener('click', () => {
-            carrito = [];
-            footerCarrito();
-            productosEnCarrito();
+    vaciarCarrito.addEventListener('click', () => {
+        carrito = [];
+        footerCarrito();
+        productosEnCarrito();
     });
     const finCompra = document.getElementById('finCompra');
-    finCompra.addEventListener('click', () =>{
+    finCompra.addEventListener('click', () => {
         modalCheckout.classList.toggle("modal-show");
         mostrarEnModal();
     });
@@ -119,58 +125,55 @@ const restarCarrito = (id) => {
 
 const itemsCompra = document.querySelector('#modal-items tbody');
 
-function mostrarEnModal(){
+
+function mostrarEnModal() {
 
     itemsCompra.innerHTML = '';
 
-    carrito.forEach((producto) =>{
-    let subTotal = producto.precio * producto.cantidad
+    carrito.forEach((producto) => {
+        let itemsComprados = producto.precio * producto.cantidad;
         const div = document.createElement('tr');
         div.innerHTML = `
         <td>${producto.nombre}</td>
-        <td>$${subTotal}</td>
+        <td>$${itemsComprados}</td>
         `;
         itemsCompra.appendChild(div);
     })
+
     totalModal();
-
 }
-//Funcion que calcula el total de la compra
-const totalCompra = document.getElementById('total-modal');
 
-const totalModal = () =>{
+//Funcion que calcula el total de la compra
+
+const totalModal = () => {
 
     carrito = JSON.parse(localStorage.getItem('carrito-local'))
 
-    let total = carrito.reduce((acc, producto) => acc + producto.cantidad * producto.precio, 0);
-    console.log(total);
-    totalCompra.innerHTML = `<h3>Total a pagar: $${total}</h3>`;
-    
+    subTotal = carrito.reduce((acc, producto) => acc + producto.cantidad * producto.precio, 0);
+
+
+    selectorEnvio.forEach((radio) => {
+        radio.addEventListener('change', () => {
+            switch (radio.value) {
+                case "0":
+                    envioTotal.innerText = `Costo de Envio: $ ${radio.value}`;
+                    totalPagar.innerText = `Total a pagar $ ${subTotal + 0}`;
+                    break;
+                case "500":
+                    envioTotal.innerText = `Costo de Envio: $ ${radio.value}`
+                    totalPagar.innerText = `Total a pagar $ ${subTotal + 500}`;
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
+
     sincronizarStorage();
+
 }
 
-//Funcion para agregar el costo de envio
 
-const selectorEnvio = document.getElementsByName('flexRadioDefault');
-const envioTotal = document.getElementById('total-envio');
-
-selectorEnvio.forEach((radio) =>{
-    radio.addEventListener('change', () => {
-
-        switch (radio.value) {
-            case "0":
-                envioTotal.innerText = 'Costo de Envio: $0';
-                break;
-            case "500":
-                envioTotal.innerText =  'Costo de Envio $500';
-                    break;
-            default:
-                break;
-        }
-    });
-});
-        
-//VER LA MANAERA DE QUE SE MUESTRE EL TOTAL DE LA COMPRA MAS EL ENVIO EN EL H3 DE TOTAL A PAGAR
 
 
 
